@@ -4,10 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class RentalPage {
-    private final WebDriver driver;
-
-
     public static final By rentalHeader = By.className("Order_Header__BZXOb");
+    public static final By confirmButton = By.xpath("//button[text()='Да']");
     private static final By deliveryDateInput = By.xpath("//input[@placeholder='* Когда привезти самокат']");
     private static final By rentalDurationDropdown = By.className("Dropdown-placeholder");
     private static final By rentalDuration = By.xpath("//div[contains(text(), 'трое суток')]");
@@ -16,8 +14,8 @@ public class RentalPage {
     private static final By courierCommentInput = By.xpath("//input[@placeholder='Комментарий для курьера']");
     private static final By orderButton = By.xpath("//button[text()='Заказать']");
     private static final By orderButtonRental = By.xpath("//*[@id='root']/div/div[2]/div[3]/button[2]");
-    public static final By confirmButton = By.xpath("//button[text()='Да']");
     private static final By orderConfirmation = By.xpath("//div[@class='Order_ModalHeader__3FDaJ']");
+    private final WebDriver driver;
 
 
     public RentalPage(WebDriver driver) {
